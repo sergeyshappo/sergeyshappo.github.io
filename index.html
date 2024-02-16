@@ -1,0 +1,180 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Уезды</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><style>#filter-bar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #input {
+            padding: 5px;
+        }
+
+        #filter-bar > #input {flex-grow: 1;}
+        #filter-bar > .typo-tolerance {
+            flex-grow: 0;
+            padding: 5px;
+        }
+        .select-filter {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .filter-bar-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .filter-bar-table > div {
+            flex: auto;
+        }
+        #filter-button {
+            height: 65px;
+            width: 15px;
+            background-color: #fff;
+            z-index: 3000;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+        .leaflet-sidebar {
+            padding: 0 !important;
+        }
+        #sidebar {
+            border: none !important;
+            border-radius: 0 !important;
+        }
+        #filter-button:after {
+            content: 'Фильтры';
+            writing-mode: vertical-rl;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            font-size: 11px;
+            font-weight: bold;        }
+
+        .type-table, .church-table, .years-facets {
+            margin: 10px;
+        }
+        .church-td {
+            max-width: 100px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .born-name-tr {
+            min-width: 62px;
+        }
+        .age-tr {
+            max-width: 68px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        td img {
+            cursor: pointer;
+        }
+        td.note-info {
+            text-align: center;
+            vertical-align: middle;
+        }
+        @media (min-width: 767px) {
+            .church-td .tooltip-value-wrapper {
+                max-width: 65px;
+                max-height: 30px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .age-tr {
+                max-width: 68px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .mobile-version {
+                display: none;
+            }
+        }
+        @media (max-width: 766px) {
+            tr {
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+            }
+            .desktop-version {
+                display: none;
+            }
+        }
+        .nav.nav-tabs {
+            margin: 2px 10px 10px 10px;
+        }
+
+        body {
+            height: 100vh;
+        }
+        td > .copy-icon {
+            float: right;
+        }
+        .copy-icon {
+            cursor: pointer;
+        }
+        .copy-icon + .copy-icon {
+            margin-left: 5px;
+        }
+        .leaflet-control-layers-toggle {
+            background-image: url(./icon-maps.svg) !important;
+            background-size: 30px 30px !important;
+            width: 30px !important;
+            height: 30px !important;
+        }</style><style>#map { height: 50vh; }
+        .marker-div-icon b {
+            background-color: aliceblue;
+            width: max-content;
+            position: absolute;
+            border-radius: 0 5px 5px 5px;
+            padding: 0 2px;
+            border: 1px solid green;
+        }
+        .info-not-found-villages {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .info-not-found-villages ul {
+            padding-left: 16px;
+        }
+        summary {
+            cursor: default;
+        }
+
+        .indicate-button {
+            padding: 5px;
+            font-size: 10px;
+            color: red;
+            cursor: pointer;
+        }
+        .leaflet-container.crosshair-cursor-enabled {
+            cursor:crosshair;
+        }
+        .marker-church-div-icon {
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .relations-reset-button {
+            background-color: #fff;
+            padding: 5px;
+        }
+        .selected-for-coords {
+            background-color: aquamarine;
+        }
+        #church-select-dropdown .leaflet-control-select-menu {
+            max-height: 35vh;
+            position: relative;
+            overflow-y: scroll;
+        }</style><script defer="defer" src="5115f8b22341bea7ed191f0.js"></script><script defer="defer" src="app14e7bced14eb0a2b8d8b.js"></script></head><body><div id="root"></div></body></html>

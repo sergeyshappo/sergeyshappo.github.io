@@ -1,1 +1,0 @@
-# sergeyshappo.github.io
