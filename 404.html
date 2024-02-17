@@ -2,8 +2,7 @@
 <html lang="en">
 <body>
 <script>
-  location.hash = location.pathname;
-
+  localStorage.setItem('pathname', location.pathname);
   location.pathname = '/';
 </script>
 </body>
